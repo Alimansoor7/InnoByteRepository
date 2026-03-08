@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: ai-code-generator
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+server:
+  port: 8080
+
+# Jira configuration (if using direct REST)
+jira:
+  url: https://your-domain.atlassian.net
+  email: your-email@example.com
+  api-token: YOUR_API_TOKEN
+
+# AI service (LocalAI / Ollama)
+ai:
+  provider: localai   # or ollama
+  base-url: http://localhost:8080  # LocalAI default
+  # base-url: http://localhost:11434  # Ollama default
+  model: qwen2.5-coder:7b-instruct   # or codellama, deepseek-coder
+
+logging:
+  level:
+    com.hackathon: DEBUG
