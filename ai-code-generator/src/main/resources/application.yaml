@@ -11,9 +11,12 @@ server:
 
 # Jira configuration (if using direct REST)
 jira:
-  url: https://your-domain.atlassian.net
-  email: your-email@example.com
-  api-token: YOUR_API_TOKEN
+  url: https://alimansoors.atlassian.net
+  auth:
+    client-id: "oGXW81mDOvftb3VA26H6SMCDO9G8qCwx"
+    client-secret: ${JIRA_CLIENT_SECRET}
+    token-url: https://auth.atlassian.com/oauth/token
+    cloud-id: ""
 
 # AI service (LocalAI / Ollama)
 ai:
